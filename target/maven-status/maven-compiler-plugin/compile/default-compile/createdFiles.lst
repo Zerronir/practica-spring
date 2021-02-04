@@ -1,0 +1,14 @@
+com/liceu/springdemohibernate/utils/CustomDateSerializer.class
+com/liceu/springdemohibernate/config/HibernateConfig.class
+com/liceu/springdemohibernate/utils/Views$jobsAndPersons.class
+com/liceu/springdemohibernate/config/AppConfig.class
+com/liceu/springdemohibernate/utils/Views.class
+com/liceu/springdemohibernate/controllers/LoginController.class
+com/liceu/springdemohibernate/config/AnnotationWebAppInitializer.class
+com/liceu/springdemohibernate/entities/User.class
+com/liceu/springdemohibernate/controllers/ViewController.class
+com/liceu/springdemohibernate/repos/UserRepo.class
+com/liceu/springdemohibernate/controllers/Controller1.class
+com/liceu/springdemohibernate/repos/NoteRepo.class
+com/liceu/springdemohibernate/utils/Views$personsAndJobs.class
+com/liceu/springdemohibernate/entities/Note.class
