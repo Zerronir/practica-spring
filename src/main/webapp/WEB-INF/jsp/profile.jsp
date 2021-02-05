@@ -11,41 +11,16 @@
 </head>
 <body>
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="container-fluid d-flex justify-content-between">
-                <a class="navbar-brand" href="/">Inici</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/myNotes">Les meves notes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sharedNotes">Notes compartides amb jo</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/oldVersions">Versions</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="/profile" tabindex="-1" aria-disabled="true">Perfil</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
+<!-- HEADER -->
+    <jsp:include page="./includes/header.jsp" />
+<!-- -->
 
 <main class="container">
 
     <div class="d-flex flex-column">
         <c:choose>
-            <c:when test="${not empty username}">
-                <h2>Perfil de ${username}</h2>
+            <c:when test="${not empty user}">
+                <h2>Perfil de ${user.getName()} ${user.getSurname()}</h2>
             </c:when>
             <c:otherwise>
                 <h2>Inicia sesión o registrate por favor</h2>

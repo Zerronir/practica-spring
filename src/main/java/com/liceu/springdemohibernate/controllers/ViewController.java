@@ -13,6 +13,16 @@ public class ViewController {
     @Autowired
     UserRepo userRepo;
 
+    @GetMapping("/")
+    public String index2(Model model) {
+
+        User user = userRepo.findById(1L).get();
+
+        model.addAttribute("user", user);
+
+        return "index";
+    }
+
     @GetMapping("/i")
     public String index(Model model) {
 

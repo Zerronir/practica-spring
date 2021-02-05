@@ -163,7 +163,26 @@
           <version>2.8.2</version>
         </plugin>
 
+        <!-- Windows -->
+        <plugin>
+          <groupId>org.codehaus.cargo</groupId>
+          <artifactId>cargo-maven2-plugin</artifactId>
+          <version>1.5.0</version>
+          <configuration>
+            <container>
+              <containerId>tomcat7x</containerId>
+              <type>installed</type>
+              <home>C:\Program Files (x86)\Apache Software Foundation\Tomcat 9.0</home>
+            </container>
+            <configuration>
+              <type>existing</type>
+              <home>C:\Program Files (x86)\Apache Software Foundation\Tomcat 9.0</home>
+            </configuration>
+          </configuration>
+        </plugin>
+        <!-- -->
 
+        <!-- MAC
         <plugin>
           <groupId>org.codehaus.cargo</groupId>
           <artifactId>cargo-maven2-plugin</artifactId>
@@ -179,7 +198,7 @@
               <home>/Applications/apache-tomcat-9.0.39</home>
             </configuration>
           </configuration>
-        </plugin>
+        </plugin> -->
       </plugins>
     </pluginManagement>
   </build>
