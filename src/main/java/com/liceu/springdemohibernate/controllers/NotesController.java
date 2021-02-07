@@ -111,5 +111,22 @@ public class NotesController {
         return view;
     }
 
+    @GetMapping("/deleteNote/{noteId}")
+    public String deleteNote(@PathVariable("noteId") Long noteId) {
+        String view = "";
+
+        if(httpSession.getAttribute("user") != null) {
+
+            noteRepo.deleteById(noteId);
+
+            view = "redirect:/myNotes";
+
+        } else {
+            view = "redirect:/login";
+        }
+
+        return view;
+    }
+
 
 }

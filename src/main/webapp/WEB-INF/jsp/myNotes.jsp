@@ -32,8 +32,35 @@
                                 <c:set var="shortText" value="${fn:substring(n.getNoteContent(), 0, 10)}" />
                                 <p class="card-text">${shortText}...</p>
                                 <a href="/viewNote/${n.getNoteId()}" class="btn btn-primary">Veure la nota</a>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                                    Eliminar nota
+                                </button>
                             </div>
                         </div>
+
+
+                        <!-- Modal delete -->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModal" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Vols eliminar la nota</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Estàs segur de que vols eliminar la nota ${n.getNoteTitle()}.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="/deleteNote/${n.getNoteId()}" class="btn btn-danger">Si, elimina la nota.</a>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No, tancar.</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -->
+
                     </c:forEach>
                 </c:when>
 
@@ -51,6 +78,6 @@
 
 </main>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<jsp:include page="includes/footer.jsp" />
 </body>
 </html>
