@@ -1,9 +1,10 @@
+D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\controllers\NotesController.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\config\HibernateConfig.java
-D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\controllers\Controller1.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\utils\Views.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\repos\UserRepo.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\repos\NoteRepo.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\entities\Note.java
+D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\repos\NoteRepoService.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\config\AnnotationWebAppInitializer.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\controllers\ViewController.java
 D:\FPGSDAW\demohibernate\src\main\java\com\liceu\springdemohibernate\utils\CustomDateSerializer.java

@@ -4,6 +4,7 @@ import com.liceu.springdemohibernate.entities.User;
 import com.liceu.springdemohibernate.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -66,9 +67,9 @@ public class LoginController {
        String view = "";
 
        if(httpSession.getAttribute("user") != null) {
-           view = "register";
-       } else {
            view = "redirect:/profile";
+       } else {
+           view = "register";
        }
 
        return view;
@@ -87,19 +88,29 @@ public class LoginController {
 
        if(validateMail(email) && validatePass(password)) {
 
-           User user = new User();
 
-           user.setEmail(email);
-           user.setPassword(password);
-           user.setName(name);
-           user.setNickName(nickname);
-           user.setSurname(surname);
 
-           userRepo.save(user);
+           try {
+               User user = new User();
 
-           httpSession.setAttribute("user", user);
+               user.setEmail(email);
+               user.setPassword(password);
+               user.setName(name);
+               user.setNickName(nickname);
+               user.setSurname(surname);
 
-           view = "redirect:/profile";
+               userRepo.save(user);
+
+               User u = userRepo.findByEmailEqualsAndPasswordEquals(email, password);
+               httpSession.setAttribute("user", u);
+
+               view = "redirect:/profile";
+
+           } catch(Exception e) {
+               view = "redirect:/register";
+           }
+
+
 
        } else {
            view = "redirect:/register";

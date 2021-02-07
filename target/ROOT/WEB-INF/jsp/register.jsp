@@ -44,7 +44,7 @@
     </article>
 
     <article class="d-flex justify-content-center mt-3">
-        <form class="col-12 col-md-8" action="/doLogin" method="post">
+        <form class="col-12 col-md-8" action="/doRegister" method="post">
             <div class="form-group">
                 <label for="name">Nom:</label>
                 <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp" placeholder="Escriu el teu nom">

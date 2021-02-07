@@ -7,4 +7,6 @@ public interface UserRepo extends JpaRepository<User, Long> {
 
     User findByEmailEqualsAndPasswordEquals(String email, String password);
 
+    @Override
+    <S extends User> S save(S entity);
 }

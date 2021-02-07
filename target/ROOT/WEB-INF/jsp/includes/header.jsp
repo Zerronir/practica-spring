@@ -31,16 +31,16 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true">Tanca sessió</a>
+                                    <a class="btn btn-danger" href="/logout" tabindex="-1" aria-disabled="true">Tanca sessió</a>
                                 </li>
                             </c:when>
 
                             <c:otherwise>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/login" tabindex="-1" aria-disabled="true">Inicia sesió</a>
+                                    <a class="btn btn-primary mr-2 ml-2" href="/login" tabindex="-1" aria-disabled="true">Inicia sesió</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/register" tabindex="-1" aria-disabled="true">Registra't</a>
+                                    <a class="btn btn-secondary" href="/register" tabindex="-1" aria-disabled="true">Registra't</a>
                                 </li>
                             </c:otherwise>
 

@@ -17,6 +17,7 @@ public class Note {
     Date creationDate;
     Date updateDate;
 
+
     public Long getNoteId() {
         return noteId;
     }
